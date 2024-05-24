@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reto.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="caja-gb">
+        <span class="on-off"></span>
+        <div class="borde-pantalla">
+            <div class="arriba-pantalla"><p class="p">DOT MATRIX WHIT STEREO SOUND</p></div>
+            <div class="pantalla">
+                <video class="video" src="Nintendo Game Boy - Intro.mp4" autoplay>
+                </video>
+            </div>
+            <div class="battery"></div>
+            <p class="batterytext">BATTERY</p>
+        </div>
+        <div class="parte-abajo">
+            <p>Nintendo <big>GAME BOY</big> <small>TM</small></p>
+            <div class="boton-cruz"></div>
+            <div class="botones">
+                <div class="rojo"></div>
+                <div class="rojo"></div>
+            </div>
+            <div class="botones2">
+                <div class="select-start"></div>
+                <div class="select-start"></div>
+            </div>
+            <div class="parlante">
+                <div class="rayas"></div>
+                <div class="rayas"></div>
+                <div class="rayas"></div>
+                <div class="rayas"></div>
+                <div class="rayas"></div>
+                <div class="rayas"></div>
+            </div>
+            <div class="phone"></div>
+        </div>
+    </div>
+    <script>
+        const videoContainer = document.querySelector('.pantalla');
+        const hoverVideo = document.querySelector('.video');
+
+        videoContainer.addEventListener('mouseenter', () => {
+            hoverVideo.play();
+        });
+
+        videoContainer.addEventListener('mouseleave', () => {
+            hoverVideo.pause();
+            hoverVideo.currentTime = 0;
+        });
+    </script>
+</body>
+</html>
